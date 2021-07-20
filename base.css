@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 
 html, body {
 	margin:0;
@@ -17,7 +17,6 @@ html, body {
 }
 
 h1, h2, h3, h4, h5 {
-	margin: 3rem 0 1.38rem;
 	line-height: 1.3;
 }
 
@@ -34,8 +33,25 @@ h4.display {font-size: 1.777rem;}
 
 h5.display {font-size: 1.333rem;}
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.button {
+	font-weight: bold;
+}
+
 .text-center {
 	text-align: center;
+}
+
+.text-semi-bold {
+	font-weight: 600;
+}
+
+.text-bold {
+	font-weight: bold;
 }
 
 body {
