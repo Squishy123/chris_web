@@ -98,7 +98,8 @@ async function main() {
 	inject_posts["{ALL_POSTS}"] = ""
 	posts_meta.forEach(p => (
 		inject_posts["{ALL_POSTS}"] += post_layout.replace("{TITLE}", p.title).replace("{DATE}", p.date).replace("{DESCRIPTION}", p.description).replace("{LINK}", p.link)
-	)) 
+	))
+
 	inject_posts["{LATEST_POSTS}"] = ""
 	posts_meta.slice(0,1).forEach(p => (
 		inject_posts["{LATEST_POSTS}"] += post_layout.replace("{TITLE}", p.title).replace("{DATE}", p.date).replace("{DESCRIPTION}", p.description).replace("{LINK}", p.link)
