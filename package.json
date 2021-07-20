@@ -1,0 +1,26 @@
+{
+	"name": "chris_web",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "node scripts/build.js",
+		"deploy": "npm run build && gh-pages -d build -b gh-pages"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Squishy123/chris_web.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Squishy123/chris_web/issues"
+	},
+	"homepage": "https://github.com/Squishy123/chris_web#readme",
+	"dependencies": {
+		"fs-extra": "^10.0.0"
+	},
+	"devDependencies": {
+		"gh-pages": "^3.2.3"
+	}
+}
