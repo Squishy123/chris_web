@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "node scripts/build.js",
-		"deploy": "npm run build && gh-pages -d build -b gh-pages"
+		"deploy": "npm run build && echo cwang.work > ./build/CNAME && gh-pages -d build -b gh-pages"
 	},
 	"repository": {
 		"type": "git",
