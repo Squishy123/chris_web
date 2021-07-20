@@ -1,0 +1,6 @@
+<div style="margin: 1rem 0">
+<h1 style="margin: 0">{TITLE}</h1>
+<p>{DATE}</p>
+<p>{DESCRIPTION}</p>
+<a class="button" href="{LINK}"><h3 style="margin: 0" class="text-semi-bold">Read More -></h3></a>
+</div>

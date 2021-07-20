@@ -6,10 +6,6 @@ html, body {
 	padding:0;
 }
 
-img {
-	max-width: 100%;
-}
-
 * {
 	font-family: 'Inter', sans-serif;
 	font-weight: 300;
@@ -19,7 +15,6 @@ img {
 	font-family: 'STIX Two Math', serif;
 	font-weight: 400;
 }
-
 
 h1, h2, h3, h4, h5 {
 	line-height: 1.3;

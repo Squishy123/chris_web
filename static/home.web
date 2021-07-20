@@ -15,10 +15,7 @@ I'm a normal dude by day and at night... I sleep. Jokes aside, I enjoy working o
 <div class="container" style="border-bottom: black 1px solid;">
 <h2 class="display">Latest Thoughts.</h2>
 <div>
-<h1 style="margin: 0">New Website, New Me?</h1>
-<p>July 20, 2021</p>
-<p>My last website was getting old. I built it over 2 years ago. So I thought to myself, one late monday evening - maybe it was time to let go.</p>
-<a class="button"><h3 style="margin: 0" class="text-semi-bold">Read More -></h3></a>
+{LATEST_POSTS}
 </div>
 <h2 style="margin-top: 3.5rem;">Want more? Catch up on my brainwaves by checking my blog. Promise you won't be disappointed.</h2>
 <a class="button" href="/blog"><h2 class="text-semi-bold">Get the full scoop -></h2></a>

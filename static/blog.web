@@ -1,0 +1,5 @@
+<div class="container" style="border-bottom: black 1px solid;">
+<h2 class="display">Look into my mind.</h2>
+{ALL_POSTS}
+</div>
+
