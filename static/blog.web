@@ -1,5 +1,9 @@
 <div class="container" style="border-bottom: black 1px solid;">
 <h2 class="display">Look into my mind.</h2>
+<h2>I like to think and write about all things science, philosophy, tech-related. Here are some of my thoughts.</h2>
+</div>
+
+<div class="container" style="border-bottom: black 1px solid;">
 {ALL_POSTS}
 </div>
 

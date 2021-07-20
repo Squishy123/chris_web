@@ -70,6 +70,8 @@ async function build_dynamic_page(page_path, template_path, out_path) {
 
 async function main() {
 	// STATIC PAGES
+	
+	// TODO Add 404 page
 
 	// CONTACT
 	await build_page(CONTACT, LAYOUT, OUT + "contact")
