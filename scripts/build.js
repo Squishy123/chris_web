@@ -1,10 +1,12 @@
 const fs = require('fs-extra')
 const util = require('util')
 const path = require('path')
+const marked = require('marked')
 
 // DEFAULT PATHS
 
 const LAYOUT = path.join(__dirname, '../templates/layout')
+const BLOG_LAYOUT = path.join(__dirname, '../templates/blog_layout')
 
 const HOME =  path.join(__dirname, '../static/home.web')
 const CONTACT =  path.join(__dirname, '../static/contact.web')
@@ -51,8 +53,9 @@ async function build_dynamic_page(page_path, template_path, out_path) {
 	await fs.rename(path.join(out_path, "/"+metadata.slug, "/index.web"), path.join(out_path, "/"+metadata.slug, "/index.html"))
 
 	let template_content = await fs.readFile(path.join(out_path, "/"+metadata.slug, "/index.html"), 'utf8')
+	let combined_content = template_content.replace(/\{CONTENT\}/g, marked(page_content.split("%METADATA%")[2])).replace(/\{TITLE\}/g, metadata.title).replace(/\{AUTHOR\}/g, metadata.author).replace(/\{DATE\}/g, new Date(metadata.date).toDateString())
 
-	let combined_content = template_content.replace(/\{CONTENT\}/g, page_content.split("%METADATA%")[2])
+
 	
 	await fs.writeFile(path.join(out_path, "/"+metadata.slug, "/index.html"), combined_content, 'utf8')
 	
@@ -72,12 +75,14 @@ async function main() {
 	// DYNAMIC PAGES
 	// BLOG
 	let posts = await fs.opendir(BLOG)
+	let posts_meta = []
 	for await (const post of posts) {
 		if (post.name.split('.').pop() == "md") {
-			console.log(path.join(BLOG, "/"+post.name))
-			await build_dynamic_page(path.join(BLOG, "/"+post.name), LAYOUT, OUT+"/blog")
+			let post_meta = await build_dynamic_page(path.join(BLOG, "/"+post.name), BLOG_LAYOUT, OUT+"/blog")
+			posts_meta.push(post_meta)
 		}
 	}
+	console.log(posts_meta)
 }
 
 main()
