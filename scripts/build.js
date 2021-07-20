@@ -39,6 +39,7 @@ async function main() {
 	await build_page(HOME, LAYOUT, OUT)
 	
 	// CONTACT
+	await build_page(CONTACT, LAYOUT, OUT + "/contact")
 
 	// DYNAMIC PAGES
 	// BLOG
