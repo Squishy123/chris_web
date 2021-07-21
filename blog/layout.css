@@ -71,11 +71,16 @@ main {
 	padding: 1.333rem 1.333rem;
 }
 
+img {
+	width: 100%;
+}
+
 header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	width: 100%;
+	max-width: 1000px;
 }
 
 footer {
